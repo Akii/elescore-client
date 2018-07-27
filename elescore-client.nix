@@ -4710,11 +4710,11 @@
     }
 
     {
-      name = "moment-2.22.1.tgz";
+      name = "moment-2.22.2.tgz";
       path = fetchurl {
-        name = "moment-2.22.1.tgz";
-        url  = "https://registry.yarnpkg.com/moment/-/moment-2.22.1.tgz";
-        sha1 = "529a2e9bf973f259c9643d237fda84de3a26e8ad";
+        name = "moment-2.22.2.tgz";
+        url  = "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz";
+        sha1 = "3c257f9839fc0e93ff53149632239eb90783ff66";
       };
     }
 
