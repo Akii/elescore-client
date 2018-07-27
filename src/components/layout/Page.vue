@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="app-container">
     <div class="ele-header-container d-none d-sm-block">
-      <div class="container">
+      <div class="container app-header">
         <header class="blog-header py-3 ele-header">
           <div class="row flex-nowrap justify-content-between align-items-center">
             <div class="col-6">
@@ -16,7 +16,7 @@
         </header>
       </div>
     </div>
-    <b-navbar toggleable="md" type="dark" class="ele-bar">
+    <b-navbar toggleable="sm" type="dark" class="ele-bar">
       <div class="container">
         <b-navbar-toggle class="ele-bar-item" target="nav_collapse"></b-navbar-toggle>
         <b-collapse is-nav id="nav_collapse">
@@ -35,7 +35,7 @@
     <footer class="ele-bar ele-footer">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 col-md-12 text-center text-lg-left d-none d-lg-block">
+          <div class="col-lg-6 col-md-12 text-center text-lg-left">
             © 2017 <a href="https://twitter.com/AkiiZedd" target="_blank">Akii</a>
           </div>
           <div class="col-lg-6 col-md-12 text-center text-lg-right">
@@ -69,9 +69,52 @@
 </script>
 
 <style>
-body {
+html, body {
   height: 100%;
-  background-color: rgb(239, 243, 248);
+  margin: 0;
+  /* background-color: rgb(239, 243, 248); */
+}
+
+.app-container {
+  --side-padding: calc(1rem + 1vw);
+  --non-content-height: 95px;
+  box-sizing: border-box;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-columns: 100%;
+  grid-template-areas:
+    'header'
+    'nav'
+    'content'
+    'footer';
+}
+
+.ele-header-container {
+  grid-area: header;
+  box-sizing: border-box;
+  display: flex;
+  padding-left: var(--side-padding, 16px);
+  padding-right: var(--side-padding, 16px);
+}
+
+.ele-nav {
+  grid-area: nav;
+  display: flex;
+  background-color: gray;
+  padding-left: var(--side-padding, 16px);
+}
+
+.ele-content {
+  grid-area: content;
+  height: 100%;
+}
+
+.ele-footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  background-color: gray;
 }
 
 .ele-header-container {
@@ -108,16 +151,6 @@ body {
 
 .ele-bar .ele-warn {
   color: yellow;
-}
-
-.ele-content {
-  min-height: calc(100vh - 199px);
-}
-
-@media (max-width: 575.98px) {
-  .ele-content {
-    min-height: calc(100vh - 105px);
-  }
 }
 
 .ele-footer {

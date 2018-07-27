@@ -191,8 +191,19 @@
 
   @media (max-width: 575.98px) {
     #mappu {
-      height: calc(100vh - 105px);
+      height: calc(100vh - 124px);
     }
+  }
+
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    #mappu {
+      height: calc(100vh - 218px);
+    }
+  }
+
+  /* todo: fix iPhones :S */
+  @supports (-webkit-overflow-scrolling: touch) {
+    /* CSS specific to iOS devices */ 
   }
 
   .ol-popup {
