@@ -61,15 +61,14 @@
       return {
         mapLoaded: false,
         disruptions: [],
-        mapSize: 500,
+        map: undefined,
+        layer: undefined,
         activeDisruption: {}
       }
     },
-    created () {
-      this.fetchDisruptionMarker().then((diss) => {
-        this.disruptions = diss
-        this.loadMap()
-      })
+    mounted () {
+      this.map = this.loadMap()
+      this.updateMapMarker()
     },
     filters: {
       translateReason (r) {
@@ -86,7 +85,12 @@
         return moment(d).fromNow(true)
       }
     },
-    computed: mapGetters(['station', 'facility']),
+    watch: {
+      disruptionMarker () {
+        this.updateMapMarker()
+      }
+    },
+    computed: mapGetters(['station', 'facility', 'disruptionMarker']),
     methods: {
       ...mapActions(['fetchDisruptionMarker']),
       loadMap () {
@@ -108,16 +112,54 @@
           return false
         }
 
-        // map markers
+        let map = new Map({
+          target: 'mappu',
+          layers: [
+            new TileLayer({
+              source: new OSMSource()
+            })
+          ],
+          view: new View({
+            center: proj.transform([10.448, 51.358], 'EPSG:4326', 'EPSG:3857'),
+            zoom: 6
+          }),
+          overlays: [overlay]
+        })
 
+        map.on('click', (evt) => {
+          let feature = map.forEachFeatureAtPixel(evt.pixel, (f) => { return f })
+
+          if (feature) {
+            overlay.setPosition(feature.getGeometry().getCoordinates())
+            this.activeDisruption = this.disruptionMarker[feature.get('disruptionId')]
+          } else {
+            overlay.setPosition(undefined)
+            this.activeDisruption = {}
+          }
+        })
+
+        map.on('pointermove', function (e) {
+          let pixel = map.getEventPixel(e.originalEvent)
+          let hit = map.hasFeatureAtPixel(pixel)
+          map.getViewport().style.cursor = hit ? 'pointer' : ''
+        })
+
+        this.mapLoaded = true
+
+        return map
+      },
+      updateMapMarker () {
+        this.map.removeLayer(this.layer)
+
+        // map markers
         let markers = []
 
         let mkPoint = ({x, y}) => {
           return new Point(proj.transform([x, y], 'EPSG:4326', 'EPSG:3857'))
         }
 
-        for (let i = 0; i < this.disruptions.length; i++) {
-          let disruption = this.disruptions[i]
+        for (let i = 0; i < this.disruptionMarker.length; i++) {
+          let disruption = this.disruptionMarker[i]
 
           let f = new Feature({
             type: 'icon',
@@ -137,53 +179,17 @@
           markers.push(f)
         }
 
-        let markerLayer = new VectorLayer({
+        this.layer = new VectorLayer({
           source: new VectorSource({
             features: markers
           })
         })
 
-        // the map
-
-        let map = new Map({
-          target: 'mappu',
-          layers: [
-            new TileLayer({
-              source: new OSMSource()
-            }),
-            markerLayer
-          ],
-          view: new View({
-            center: proj.transform([10.448, 51.358], 'EPSG:4326', 'EPSG:3857'),
-            zoom: 6
-          }),
-          overlays: [overlay]
-        })
-
-        map.on('click', (evt) => {
-          let feature = map.forEachFeatureAtPixel(evt.pixel, (f) => { return f })
-
-          if (feature) {
-            overlay.setPosition(feature.getGeometry().getCoordinates())
-            this.activeDisruption = this.disruptions[feature.get('disruptionId')]
-          } else {
-            overlay.setPosition(undefined)
-            this.activeDisruption = {}
-          }
-        })
-
-        map.on('pointermove', function (e) {
-          let pixel = map.getEventPixel(e.originalEvent)
-          let hit = map.hasFeatureAtPixel(pixel)
-          map.getViewport().style.cursor = hit ? 'pointer' : ''
-        })
-
-        this.mapLoaded = true
+        this.map.addLayer(this.layer)
       }
     }
   }
 </script>
-
 <style>
   #mappu {
     height: calc(100vh - 199px);

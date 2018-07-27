@@ -59,8 +59,8 @@
     },
     computed: mapGetters(['disruptionMarker']),
     methods: {
-      async updateNumberOfDisruptions () {
-        await this.fetchDisruptionMarker()
+      updateNumberOfDisruptions () {
+        this.fetchDisruptionMarker()
         setTimeout(() => { this.updateNumberOfDisruptions() }, 60000)
       },
       ...mapActions(['fetchDisruptionMarker'])
