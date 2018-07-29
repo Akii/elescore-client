@@ -26,8 +26,6 @@
   </div>
 </template>
 <script>
-import moment from 'moment'
-
 import FacilityGrade from './Grade'
 
 export default {
@@ -44,7 +42,16 @@ export default {
       if (dt < 60) {
         return '--'
       }
-      return moment().add(dt, 'minutes').fromNow(true)
+
+      let days = Math.floor(dt / 1440)
+      let remainingHours = Math.floor((dt % 1440) / 60)
+      let text = remainingHours + (remainingHours == 1 ? ' Stunde' : ' Stunden')
+
+      if (days) {
+        return days + (days == 1 ? ' Tag, ' : ' Tage, ') + text
+      } else {
+        return text
+      }
     }
   }
 }
