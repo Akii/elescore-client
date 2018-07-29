@@ -11,18 +11,24 @@
           </tr>
           <tr>
             <td><b>Station:</b></td>
-            <td>{{ activeDisruption.stationName || activeDisruption.stationId }}</td>
+            <td>
+              <router-link :to="{path: '/stations', query: {search: activeDisruption.stationName}}">
+                {{ activeDisruption.stationName || activeDisruption.stationId }}
+              </router-link>
+            </td>
           </tr>
           <tr>
             <td><b>{{ activeDisruption.facilityType === 'Elevator' ? 'Aufzug' : 'Rolltreppe' }}:</b></td>
-            <td>{{ activeDisruption.facilityDescription || activeDisruption.facilityId }}</td>
+            <td>
+                {{ activeDisruption.facilityDescription || '# ' + activeDisruption.facilityId }}
+            </td>
           </tr>
           <tr>
-            <td><b>Seit:</b></td>
+            <td><b>Dauer bisher:</b></td>
             <td>{{ activeDisruption.since | calculateDuration }}</td>
           </tr>
           <tr v-if="activeDisruption.reason">
-            <td><b>Grund:</b></td>
+            <td><b>Status:</b></td>
             <td>{{ activeDisruption.reason | translateReason }}</td>
           </tr>
           </tbody>

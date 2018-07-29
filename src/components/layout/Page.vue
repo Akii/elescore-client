@@ -72,7 +72,7 @@
 html, body {
   height: 100%;
   margin: 0;
-  /* background-color: rgb(239, 243, 248); */
+  background-color: rgb(239, 243, 248);
 }
 
 .app-container {

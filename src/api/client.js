@@ -29,7 +29,8 @@ function mkFacility (json) {
     json.id,
     json.type,
     json.description,
-    json.geoCoordinates
+    json.geoCoordinates,
+    json.downtime
   )
 }
 
