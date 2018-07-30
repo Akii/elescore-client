@@ -41,8 +41,8 @@
           <div class="col-lg-6 col-md-12 text-center text-lg-right">
             <a href="https://github.com/Akii/elescore" target="_blank"><font-awesome-icon :icon="['fab', 'github']" /> Projekt</a> |
             <a href="https://haskell-lang.org" target="_blank">λ made with Haskell</a> |
-            <router-link to="impress">Attributionen</router-link> |
-            <router-link to="impress">Impressum</router-link>
+            <router-link to="impress">Impressum</router-link> |
+            <router-link to="privacy-policy">Datenschutz</router-link>
           </div>
         </div>
       </div>

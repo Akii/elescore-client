@@ -1,6 +1,6 @@
 {
   "name": "elescore-client",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Rich client for elescore.de",
   "author": "Philipp Maier",
   "private": true,
