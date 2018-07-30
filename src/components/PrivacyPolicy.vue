@@ -89,55 +89,6 @@
           zurückgegriffen werden kann. Ohne Ihre Einwilligung werden diese Daten nicht an Dritte weitergegeben.
         </p>
 
-        <h2>Google Analytics</h2>
-        <p>
-          Diese Website nutzt aufgrund unserer berechtigten Interessen zur Optimierung und Analyse unseres
-          Online-Angebots im Sinne des Art. 6 Abs. 1 lit. f. DSGVO den Dienst „Google Analytics“, welcher von der Google Inc.
-          (1600 Amphitheatre Parkway Mountain View, CA 94043, USA) angeboten wird. Der Dienst (Google Analytics) verwendet
-          „Cookies“ – Textdateien, welche auf Ihrem Endgerät gespeichert werden. Die durch die Cookies gesammelten
-          Informationen werden im Regelfall an einen Google-Server in den USA gesandt und dort gespeichert.
-        </p>
-        <p>
-          Google LLC hält das europäische Datenschutzrecht ein und ist unter dem Privacy-Shield-Abkommen zertifiziert:
-          https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active
-          Auf dieser Website greift die IP-Anonymisierung. Die IP-Adresse der Nutzer wird innerhalb der Mitgliedsstaaten
-          der EU und des Europäischen Wirtschaftsraum und in den anderen Vertragsstaaten des Abkommens gekürzt.
-          Nur in Einzelfällen wird die IP-Adresse zunächst ungekürzt in die USA an einen Server von Google übertragen
-          und dort gekürzt. Durch diese Kürzung entfällt der Personenbezug Ihrer IP-Adresse. Die vom Browser übermittelte
-          IP-Adresse des Nutzers wird nicht mit anderen von Google gespeicherten Daten kombiniert.
-        </p>
-        <p>
-          Im Rahmen der Vereinbarung zur Auftragsdatenvereinbarung, welche wir als Websitebetreiber mit der Google Inc.
-          geschlossen haben, erstellt diese mithilfe der gesammelten Informationen eine Auswertung der Websitenutzung
-          und der Websiteaktivität und erbringt mit der Internetnutzung verbundene Dienstleistungen.
-          Die von Google in unserem Auftrag erhobenen Daten werden genutzt, um die Nutzung unseres Online-Angebots durch
-          die einzelnen Nutzer auswerten zu können, z. B. um Reports über die Aktivität auf der Website zu erstellen,
-          um unser Online-Angebot zu verbessern.
-          Sie haben die Möglichkeit, die Speicherung der Cookies auf Ihrem Gerät zu verhindern, indem Sie in Ihrem
-          Browser entsprechende Einstellungen vornehmen. Es ist nicht gewährleistet, dass Sie auf alle Funktionen
-          dieser Website ohne Einschränkungen zugreifen können, wenn Ihr Browser keine Cookies zulässt.
-          Weiterhin können Sie durch ein Browser-Plugin verhindern, dass die durch Cookies gesammelten Informationen
-          (inklusive Ihrer IP-Adresse) an die Google Inc. gesendet und von der Google Inc. genutzt werden. Folgender
-          Link führt Sie zu dem entsprechenden Plugin: https://tools.google.com/dlpage/gaoptout?hl=de
-          Alternativ verhindern Sie mit einem Klick auf diesen Link (
-            <a href="javascript:gaOptOut();" onclick="alert('Google Analytics wurde deaktiviert');">
-              Erfassung von Daten durch Google Analytics für diese Website deaktivieren
-            </a>), dass Google
-          Analytics innerhalb dieser Website Daten über Sie erfasst. Mit dem Klick auf obigen Link laden Sie ein
-          „Opt-Out-Cookie“ herunter. Ihr Browser muss die Speicherung von Cookies also hierzu grundsätzlich erlauben.
-          Löschen Sie Ihre Cookies regelmäßig, ist ein erneuter Klick auf den Link bei jedem Besuch dieser Website
-          vonnöten.
-        </p>
-        <p>
-          Hier finden Sie weitere Informationen zur Datennutzung durch die Google Inc.:
-
-          <ul>
-            <li>https://policies.google.com/privacy/partners?hl=de (Daten, die von Google-Partnern erhoben werden)</li>
-            <li>https://adssettings.google.de/authenticated (Einstellungen über Werbung, die Ihnen angezeigt wird)</li>
-            <li>https://policies.google.com/technologies/ads?hl=de (Verwendung von Cookies in Anzeigen)</li>
-          </ul>
-        </p>
-
         <h2>Cloudflare</h2>
         <p>
           Auf unserer Webseite wird ein Service des Unternehmens Cloudflare Inc., 101 Townsend St, 94107 San Francisco,
