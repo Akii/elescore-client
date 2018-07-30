@@ -6,26 +6,22 @@
         <h6 class="card-subtitle mb-2 text-muted">Stand: 30.07.2018</h6>
 
         <h2>Grundlegendes</h2>
-
         <p>
           Diese Datenschutzerklärung soll die Nutzer dieser Website über die Art,
           den Umfang und den Zweck der Erhebung und Verwendung personenbezogener
           Daten durch den Websitebetreiber Philipp Maier, Tivoliplatz 1, 76137 Karlsruhe informieren.
         </p>
-
         <p>
           Der Websitebetreiber nimmt Ihren Datenschutz sehr ernst und behandelt Ihre personenbezogenen Daten
           vertraulich und entsprechend der gesetzlichen Vorschriften. Da durch neue Technologien und die
           ständige Weiterentwicklung dieser Webseite Änderungen an dieser Datenschutzerklärung vorgenommen
           werden können, empfehlen wir Ihnen sich die Datenschutzerklärung in regelmäßigen Abständen wieder durchzulesen.
         </p>
-
         <p>
           Definitionen der verwendeten Begriffe (z.B. “personenbezogene Daten” oder “Verarbeitung”) finden Sie in Art. 4 DSGVO.
         </p>
 
         <h2>Zugriffsdaten</h2>
-
         <p>
           Wir, der Websitebetreiber bzw. Seitenprovider, erheben aufgrund unseres
           berechtigten Interesses (s. Art. 6 Abs. 1 lit. f. DSGVO) Daten über Zugriffe auf die
@@ -44,7 +40,6 @@
             <li>Verwendete IP-Adresse</li>
           </ul>
         </p>
-
         <p>
           Die Server-Logfiles werden für maximal 7 Tage gespeichert und anschließend gelöscht.
           Die Speicherung der Daten erfolgt aus Sicherheitsgründen, um z. B. Missbrauchsfälle aufklären zu können.
@@ -53,7 +48,6 @@
         </p>
 
         <h2>Reichweitenmessung & Cookies</h2>
-
         <p>
           Diese Website verwendet Cookies zur pseudonymisierten Reichweitenmessung,
           die entweder von unserem Server oder dem Server Dritter an den Browser des Nutzers übertragen werden.
@@ -61,7 +55,6 @@
           Ihr Browser greift auf diese Dateien zu. Durch den Einsatz von Cookies erhöht sich die Benutzerfreundlichkeit
           und Sicherheit dieser Website.
         </p>
-
         <p>
           Falls Sie nicht möchten, dass Cookies zur Reichweitenmessung auf Ihrem Endgerät gespeichert werden,
           können Sie dem Einsatz dieser Dateien hier widersprechen:
@@ -135,7 +128,6 @@
           Löschen Sie Ihre Cookies regelmäßig, ist ein erneuter Klick auf den Link bei jedem Besuch dieser Website
           vonnöten.
         </p>
-
         <p>
           Hier finden Sie weitere Informationen zur Datennutzung durch die Google Inc.:
 
@@ -158,7 +150,6 @@
           Handling der übertragenen Daten finden Sie in der Datenschutzerklärung von Cloudflare:
           https://www.cloudflare.com/security-policy/.
         </p>
-
 
         <h2>Rechte des Nutzers</h2>
         <p>
