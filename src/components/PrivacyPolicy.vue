@@ -146,6 +146,20 @@
           </ul>
         </p>
 
+        <h2>Cloudflare</h2>
+        <p>
+          Auf unserer Webseite wird ein Service des Unternehmens Cloudflare Inc., 101 Townsend St, 94107 San Francisco,
+          CA 94107, USA (nachfolgend: Cloudflare) verwendet. Wir nutzen diese Daten, um die volle Funktionalität unserer
+          Webseite zu gewährleisten. In diesem Zusammenhang wird Ihr Browser ggf. personenbezogene Daten an Cloudflare
+          übermitteln. Rechtsgrundlage für die Datenverarbeitung ist Art. 6 Abs.1 lit. f DSGVO. Das berechtigte Interesse
+          besteht in einer fehlerfreien Funktion der Internetseite. Cloudflare hat sich im Rahmen des
+          EU-US-Privacy-Shield-Abkommens selbst zertifiziert (vgl. https://www.privacyshield.gov/list).
+          Die Löschung der Daten erfolgt, sobald der Zweck ihrer Erhebung erfüllt wurde. Weitere Informationen zum
+          Handling der übertragenen Daten finden Sie in der Datenschutzerklärung von Cloudflare:
+          https://www.cloudflare.com/security-policy/.
+        </p>
+
+
         <h2>Rechte des Nutzers</h2>
         <p>
           Sie haben als Nutzer das Recht, auf Antrag eine kostenlose Auskunft darüber zu erhalten, welche personenbezogenen
