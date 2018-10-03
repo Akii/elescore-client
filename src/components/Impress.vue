@@ -14,8 +14,8 @@
                 <h3>Anbieter</h3>
                 <p>
                   Philipp Maier <br/>
-                  Tivoliplatz 1<br/>
-                  76137 Karlsruhe
+                  Killisfeldstr. 36<br/>
+                  76227 Karlsruhe
                 </p>
               </div>
               <div class="col-6">
