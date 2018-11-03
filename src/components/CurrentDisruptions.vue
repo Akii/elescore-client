@@ -79,11 +79,11 @@
     filters: {
       translateReason (r) {
         const reasons = {
-          'under construction': 'In Reparatur',
-          'monitoring disrupted': 'Fernüberwachung gestört',
-          'under maintenance': 'In Wartung',
-          'not available': 'Nicht verfügbar',
-          'monitoring not available': 'Fernüberwachung nicht verfügbar'
+          'UnderConstruction': 'In Reparatur',
+          'MonitoringDisrupted': 'Fernüberwachung gestört',
+          'UnderMaintenance': 'In Wartung',
+          'NotAvailable': 'Nicht verfügbar',
+          'MonitoringNotAvailable': 'Fernüberwachung nicht verfügbar'
         }
         return reasons[r] || r
       },
@@ -160,8 +160,8 @@
         // map markers
         let markers = []
 
-        let mkPoint = ({x, y}) => {
-          return new Point(proj.transform([x, y], 'EPSG:4326', 'EPSG:3857'))
+        let mkPoint = ({lat, lng}) => {
+          return new Point(proj.transform([lat, lng], 'EPSG:4326', 'EPSG:3857'))
         }
 
         for (let i = 0; i < this.disruptionMarker.length; i++) {

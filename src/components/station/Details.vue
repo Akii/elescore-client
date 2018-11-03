@@ -61,11 +61,11 @@ export default {
   filters: {
     translateReason (r) {
       const reasons = {
-        'under construction': 'In Reparatur',
-        'monitoring disrupted': 'Fernüberwachung gestört',
-        'under maintenance': 'In Wartung',
-        'not available': 'Nicht verfügbar',
-        'monitoring not available': 'Fernüberwachung nicht verfügbar'
+        'UnderConstruction': 'In Reparatur',
+        'MonitoringDisrupted': 'Fernüberwachung gestört',
+        'UnderMaintenance': 'In Wartung',
+        'NotAvailable': 'Nicht verfügbar',
+        'MonitoringNotAvailable': 'Fernüberwachung nicht verfügbar'
       }
       return reasons[r] || r
     },
