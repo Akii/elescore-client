@@ -44,13 +44,16 @@ export default {
       }
 
       let days = Math.floor(dt / 1440)
+      let daysText = days + (days == 1 ? ' Tag' : ' Tage')
       let remainingHours = Math.floor((dt % 1440) / 60)
-      let text = remainingHours + (remainingHours == 1 ? ' Stunde' : ' Stunden')
+      let remainingHoursText = remainingHours + (remainingHours == 1 ? ' Stunde' : ' Stunden')
 
-      if (days) {
-        return days + (days == 1 ? ' Tag, ' : ' Tage, ') + text
-      } else {
-        return text
+      if (days && remainingHours) {
+        return daysText + ', ' + remainingHoursText
+      } else if (days) {
+        return daysText
+      } else if (remainingHours) {
+        return remainingHoursText
       }
     }
   }
