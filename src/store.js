@@ -36,7 +36,11 @@ const actions = {
         s.facilities.forEach(f => {
           facilities[f.id] = f
         })
+
+        s.facilities = _.sortBy(s.facilities, ['description', 'id'])
       })
+
+      stations = _.sortBy(stations, 'name')
 
       commit('setStations', stations)
       commit('setFacilities', facilities)
