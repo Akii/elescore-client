@@ -167,6 +167,10 @@
         for (let i = 0; i < this.disruptionMarker.length; i++) {
           let disruption = this.disruptionMarker[i]
 
+          if (!disruption.geoCoordinates) {
+            continue
+          }
+
           let f = new Feature({
             type: 'icon',
             geometry: mkPoint(disruption.geoCoordinates)
