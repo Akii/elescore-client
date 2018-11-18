@@ -1,65 +1,58 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import _ from 'lodash'
 
 import client from './api/client'
+import OverallStats from './api/model/overal-stats'
 
 Vue.use(Vuex)
 
 const state = {
-  stations: {},
-  facilities: {},
-  disruptionMarker: []
+  overallStats: new OverallStats({}),
+  mapMarkers: []
 }
 
 const mutations = {
-  setStations (state, ss) {
-    state.stations = ss
+  setOverallStats (state, stats) {
+    state.overallStats = stats
   },
-  setFacilities (state, fs) {
-    state.facilities = fs
-  },
-  setDisruptionMarker (state, diss) {
-    state.disruptionMarker = diss
+  setMapMarkers (state, markers) {
+    state.mapMarkers = markers
   }
 }
 
 const actions = {
-  fetchStations ({ commit }) {
-    return client.stations().then((ss) => {
-      var stations = {}
-      var facilities = {}
-
-      ss.forEach(s => {
-        stations[s.id] = s
-
-        s.facilities.forEach(f => {
-          facilities[f.id] = f
-        })
-
-        s.facilities = _.sortBy(s.facilities, ['description', 'id'])
-      })
-
-      stations = _.sortBy(stations, 'name')
-
-      commit('setStations', stations)
-      commit('setFacilities', facilities)
+  fetchOverallStats ({ commit }) {
+    return client.getOverallStats().then((stats) => {
+      commit('setOverallStats', stats)
+      return stats
     })
   },
-  fetchDisruptionMarker ({ commit }) {
-    return client.disruptionMarker().then((diss) => {
-      commit('setDisruptionMarker', diss)
-      return diss
+  fetchAverageDisruptionsPerDay () {
+    return client.getAverageDisruptionsPerDay()
+  },
+  fetchMapMarkers ({ commit }) {
+    return client.getMapMarkers().then((markers) => {
+      commit('setMapMarkers', markers)
+      return markers
     })
+  },
+  fetchDisruptions (_, pagination) {
+    return client.getDisruptions(pagination)
+  },
+  findObjects (_, search) {
+    return client.findObjects(search)
+  },
+  fetchFacilityDetails (_, facilityId) {
+    return client.getFacilityDetails(facilityId)
+  },
+  fetchFacilityDisruptions (_, {facilityId, pagination}) {
+    return client.getFacilityDisruptions(facilityId, pagination)
   }
 }
 
 const getters = {
-  stations: state => _.values(state.stations),
-  station: state => sid => { return state.stations[sid] },
-  facilities: state => _.values(state.facilities),
-  facility: state => fid => { return state.facilities[fid] },
-  disruptionMarker: state => state.disruptionMarker
+  overallStats: state => state.overallStats,
+  mapMarkers: state => state.mapMarkers
 }
 
 export default new Vuex.Store({

@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'elescore';
+    src: url('../fonts/elescore.eot');
+    src: url('../fonts/elescore.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/elescore.woff') format('woff'),
+         url('../fonts/elescore.ttf') format('truetype'),
+         url('../fonts/elescore.svg#elescore') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class*='ele-']:before{
+    display: inline-block;
+    font-family: 'elescore';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+.ele-elevator-marker:before{content:'\0041';}
+.ele-escalator-marker:before{content:'\0042';}
+.ele-elevator:before{content:'\0043';}
+.ele-escalator:before{content:'\0044';}
+.ele-elevator-circle:before{content:'\0045';}
+.ele-escalator-circle:before{content:'\0046';}
