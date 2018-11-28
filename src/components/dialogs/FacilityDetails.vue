@@ -49,7 +49,7 @@
             <template v-if="facility.object">{{ facility.object.name }} &raquo;</template> {{ facility.name }}
           </span>
 
-          <v-icon large class="facility-icon-right warning--text">warning</v-icon>
+          <v-icon v-if="facility.isDisrupted" large class="facility-icon-right warning--text">warning</v-icon>
         </v-card-title>
         <v-divider></v-divider>
         <v-card-text>
