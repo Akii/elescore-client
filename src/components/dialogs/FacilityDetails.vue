@@ -267,7 +267,7 @@
 }
 .facility-icon-right {
   position: absolute;
-  right: 12px;
+  right: 16px;
 }
 .facility-title {
   white-space: nowrap;
