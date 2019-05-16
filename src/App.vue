@@ -71,7 +71,7 @@
       <router-view></router-view>
     </v-content>
     <v-footer class="pa-3" fixed>
-      <div>&copy; 2017 <a href="https://twitter.com/AkiiZedd" target="_blank">Akii</a></div>
+      <div>&copy; 2019 <a href="https://twitter.com/AkiiZedd" target="_blank">Akii</a></div>
       <v-spacer></v-spacer>
       <div>
         <a href="https://github.com/Akii/elescore" target="_blank"><font-awesome-icon :icon="['fab', 'github']" /></a> |
