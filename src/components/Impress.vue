@@ -23,7 +23,7 @@
                   <div class="col-6">
                     <h3>Kontakt</h3>
                     <p>
-                      Telefon: ‭0151 - 10851486‬<br/>
+                      Telefon: 0176 - 43266049<br/>
                       {{ email }}
                     </p>
                   </div>
